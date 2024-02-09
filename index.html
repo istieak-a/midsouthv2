@@ -96,12 +96,11 @@
       <div class="container ">
         <div class="row mb-5">
           <div class="col-sm-12 col-md-7 col-lg-7 info order-md-1 order-2">
-            <div class="title">MID SOUTH
-              <br /> HOME BUYERS
+            <div class="sub-title">MID SOUTH HOME BUYERS</div>
+            <div class="title"> INSTANT CASH FLOW
+              <br /> FROM DAY-ONE!
             </div>
 
-            <div class="sub-title">INSTANT CASH FLOW
-              FROM DAY-ONE!</div>
             <a href="./avaiable.html">
               <button class="Discover my-3 px-4 py-3 w-75">
                 Discover Available Properties
@@ -114,15 +113,16 @@
             <div class="img-border">
               <div class="photoswipe-wrapper">
                 <div class="photoswipe-item  ">
-                  <a href="#" data-type="video"
+                  <a href="#" data-type="video" class="w-100"
                     data-video='<div class="wrapper"><div class="video-wrapper">
                     <iframe width="960" height="200px" class="pswp__video" src="https://www.youtube.com/embed/Yjg7mHH7UJU" controls></iframe></div></div>'>
                     <img src="img/homepageImg.png" alt="Image description" class="vediolink w-100">
+                    <img src="img/icon1.svg" alt="icon" class="icon" />
                   </a>
                 </div>
               </div>
 
-              <img src="img/icon1.svg" alt="icon" class="icon" />
+
             </div>
           </div>
         </div>
@@ -214,7 +214,7 @@
     <div class="container">
       <div class="row my-5">
         <div class="title-work text-center mb-4">HOW DOES IT WORK?</div>
-        <div class="owl-carousel">
+        <div class="owl-carousel" id="owl-carousel">
           <div class="owl-card  owl-step step1 m-4">
             <div>STEP 01</div>
             <div class="text-center">
@@ -1030,6 +1030,26 @@
       </div>
     </div>
   </section>
+  <section>
+    <div class="container my-5">
+      <div class="row ">
+        <div class="title_take text-center mb-3 pb-3">
+          OUR RENOVATION
+        </div>
+        <div class="col-12 col-md-4 col-lg-4 p-3 my-3">
+          <div class="mine_title_new mb-3">
+            4789 Fairley Before and After Renovation.Renovation cost: $25,388.85
+          </div>
+
+        </div>
+        <div class="col-12 col-md-8 col-lg-8">
+          <div class="owl-carousel owl-theme" id="renovation">
+            <div class="item "> <img class="before" src="./img/4789 Fairley Before.jpg" alt="before" /></div>
+            <div class="item"> <img class="before" src="./img/4789 Fairley After.jpg" alt="before" /></div>
+          </div>
+        </div>
+      </div>
+  </section>
   <section class="fqa py-3">
     <div class="container">
       <div class="row">
@@ -1473,7 +1493,7 @@
   <!-- main js -->
 
   <!-- <script src="./js/main.js"></script> -->
-  <script src="./js/Analysis.js"></script>
+
   <!-- bootstrap js -->
   <script src="./js/bootsrtap/bootstrap.min.js"></script>
   <!-- owl js -->
@@ -1726,7 +1746,28 @@
 
 
   </script>
+  
   <script>
+    $('#renovation').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
     $('#owl-carousel2').owlCarousel({
       items: 3,
       slideBy: 1,
@@ -1776,7 +1817,7 @@
         }
       }
     })
-    $('.owl-carousel').owlCarousel({
+    $('#owl-carousel').owlCarousel({
       items: 3,
       center: true,
       slideBy: 1,
@@ -1794,7 +1835,7 @@
     var owl = $('.owl-carousel')
     var activeItem = owl.find('.owl-item.active')
     var activeIndex = activeItem.index()
-    var owl2 = document.querySelector('.owl-carousel')
+    var owl2 = document.querySelector('#owl-carousel')
     var numItems = owl2.querySelectorAll('.owl-item').length
 
     console.log('Number of items: ' + numItems / 2)

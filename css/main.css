@@ -220,7 +220,7 @@ a:active {
 
 .title {
   color: var(--second-color);
-  font-size: 74px;
+  font-size: 50px;
   font-family: Inter;
   font-weight: 700;
 }
@@ -275,7 +275,7 @@ a:active {
 .icon {
   z-index: 999;
   position: absolute;
-  top: 48%;
+  top: 0%;
   right: 35%;
   width: 156px;
   height: 89px;
@@ -339,6 +339,11 @@ a:active {
   height: auto;
 }
 
+#renovation .owl-item{
+  background-color:transparent;
+  width: auto;
+  height: auto;
+}
 .owl-item {
   width: 288px;
   height: 430px;
@@ -2114,6 +2119,7 @@ li::marker {
  
   height: 100%;
   padding: 5px;
+  width: 192px;
   box-sizing: border-box;
   cursor: pointer;
   border-radius: 25px;
@@ -2121,6 +2127,7 @@ li::marker {
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
+  
 }
 
 .selected-image {
@@ -2136,7 +2143,7 @@ li::marker {
 
 .selected-image img {
   width: 100%;
-  height: 374px;
+  height: 425px;
   object-fit: contain;
   border-radius: 15px !important;
   -webkit-border-radius: 15px !important;
@@ -2229,7 +2236,7 @@ li::marker {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: -7%;
+  bottom: -4%;
   left: 30px;
 }
 
@@ -2279,6 +2286,15 @@ li::marker {
   .bg-y-title {
     font-size: 43px;
   }
+  
+.gallery img {
+ 
+  height: 100%;
+  padding: 5px;
+  width: 100%;
+
+  
+}
 }
 
 
@@ -2541,6 +2557,7 @@ label.checkbox-button {
   height: 100%;
 }
 
+
 video {
   width: 100% !important;
   height: auto !important;
@@ -2619,7 +2636,14 @@ iframe {
     width: 100% !important;
     height: 365px !important;
   }
-
+  .video-wrapper iframe {
+    position: unset;
+    top: 0;
+    left: unset;
+    width: 100%;
+    height: 100%;
+  }
+  .video-wrapper{height: unset;}
   .imgNew {
     height: 400px;
   }

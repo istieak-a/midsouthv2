@@ -2116,10 +2116,9 @@ li::marker {
 }
 
 .gallery img {
- 
-  height: 100%;
+ object-fit: fill;
   padding: 5px;
-  width: 192px;
+  width: 240px;
   box-sizing: border-box;
   cursor: pointer;
   border-radius: 25px;
@@ -2142,9 +2141,9 @@ li::marker {
 }
 
 .selected-image img {
+  height: 525px;
   width: 100%;
-  height: 425px;
-  object-fit: contain;
+  object-fit: fill;
   border-radius: 15px !important;
   -webkit-border-radius: 15px !important;
   -moz-border-radius: 15px !important;
@@ -2171,6 +2170,7 @@ li::marker {
 }
 
 .PropertyS {
+  text-wrap: nowrap;
   height: 59px;
   background: var(--main-color);
   color: var(--second-color);
@@ -2187,6 +2187,8 @@ li::marker {
 }
 
 .moreS {
+  text-wrap: nowrap;
+  
   height: 59px;
   background: var(--third-color);
   color: var(--background-white);
@@ -2218,7 +2220,7 @@ li::marker {
   -o-border-radius: 33px !important;
   position: absolute;
   z-index: 300;
-  top: -9%;
+  top: -5%;
   right: 9%;
 }
 
@@ -2236,7 +2238,7 @@ li::marker {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: -4%;
+  bottom: 0%;
   left: 30px;
 }
 
@@ -2584,6 +2586,18 @@ video {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   width: 150px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.read_moreReno {
+  background-color: var(--main-color);
+  color: var(--second-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 300px;
   font-size: 18px;
   font-weight: 500;
 }

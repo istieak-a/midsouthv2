@@ -52,6 +52,17 @@
             background-color: #f2f2f2;
             text-align: center;
         }
+        .modall-close{
+            position: absolute;
+            right: 0px;
+            top: -35px;
+            color: red;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
     </style>
 </head>
 
@@ -118,16 +129,17 @@
             </div>
         </nav>
 
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel -->
+        <div id="carouselExampleControls" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/availble//detailes/2458 Chattering Ln_2.jpeg" class="d-block w-100" alt="...">
+                    <img src="./img/exterior.png" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/availble//detailes/2458 Chattering Ln_3.jpeg" class="d-block w-100" alt="...">
+                    <img src="./img/availble//detailes/2458 Chattering Ln_3.jpeg" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/availble//detailes/2458 Chattering Ln_4.jpeg" class="d-block w-100" alt="...">
+                    <img src="./img/availble//detailes/2458 Chattering Ln_4.jpeg" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -142,6 +154,41 @@
             </button>
         </div>
 
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="close modall-close" data-bs-dismiss="modal" aria-label="Close"">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div id="carouselModal" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id="modalImage1" src="" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="modalImage2" src="" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="modalImage3" src="" class="d-block w-100">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselModal"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
 
     </section>
 
@@ -247,7 +294,7 @@
                 <div class="mine_title ">
                     Internal Rate of Return (IRR):
 
-                    <span class="sub_title_f  " style="color:#f9bd3a">%5</span>
+                    <span class="sub_title_f  " style="color:#f9bd3a">5%</span>
                     <br />
                     <div class="my-3" style="color: #062F66; font-size: 25px;"> The following improvements are specific
                         to 3684 Parakeet Rd and will be performed by licensed craftsmen using only the highest quality
@@ -370,6 +417,22 @@
         </div>
     </section>
 
+    <section class="py-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-3 ">
+                    <img class="h-100 w-100 object-fit-cover rounded" src="./img/413 Sparrow Rd_2.jpeg" alt="">
+                </div>
+                <div class="col-12 mb-3 ">
+                    <img class="h-100 w-100 object-fit-cover rounded" src="./img/availble//detailes/2458 Chattering Ln_3.jpeg" alt="">
+                </div>
+                <div class="col-12">
+                    <img class="h-100 w-100 object-fit-cover rounded" src="./img/availble//detailes/2458 Chattering Ln_4.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- --------------------------------------------- -->
     <div id="chart-container">
@@ -394,9 +457,10 @@
 
     <div id="x">
         <div class="container">
-            <h1 class="mt-4">Internal Rate of Return (IRR) </h1>
-
+            
             <div class="collapse" id="table4">
+                <h1 class="mt-4">Internal Rate of Return (IRR) </h1>
+
                 <div class="table-responsive mt-3 text-center">
                     <table class="table table-bordered  text-center">
                         <thead>
@@ -407,7 +471,7 @@
                         <tbody id="table4body" class="d-flex flex-wrap ">
                             <tr>
                                 <td>$ 14,100</td>
-
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -416,11 +480,10 @@
         </div>
 
         <div class="container">
-            <h1 class="mt-4">Investment Data for 15 Years</h1>
-
+            
             <div class="col-12  " style="overflow-x:auto;">
-
-
+                
+                
                 <div class="collapse my-4 " id="investmentTable">
                     <div class="">
                         <table class="table table-bordered d-flex">
@@ -430,6 +493,7 @@
                                     <th>Annual Rental Income</th>
                                     <th>Home Price Appreciation</th>
                                     <th>Total Annual Return on Investment</th>
+                                    <h1 class="mt-4">Investment Data for 15 Years</h1>
                                 </tr>
                             </thead>
                             <tbody id="table2body" class="tablegrid d-flex">
@@ -454,15 +518,15 @@
 
         <!-- expensse table -->
         <div class="container">
-            <h1 class="mt-4">Expensse Data for 15 Years</h1>
-
+            
             <div class="col-12" style="overflow-x:auto;">
-
-
+                
+                
                 <div class="collapse my-4" id="investmentTableexpenss">
                     <div class="table-responsive ">
                         <table class="table table-bordered  d-flex">
                             <thead class="table2">
+                                <h1 class="mt-4">Expensse Data for 15 Years</h1>
                                 <tr>
                                     <th>Year</th>
                                     <th>Mortgage Payment</th>
@@ -494,10 +558,10 @@
 
         <!-- Annual revenue -->
         <div class="container">
-            <h1 class="mt-4">Anual Cashflow</h1>
-
+            
             <div class="col-12" style="overflow-x:auto;">
                 <div class="collapse my-4" id="investmentTable3">
+                    <h1 class="mt-4">Anual Cashflow</h1>
                     <div class="table-responsive">
                         <table class="table table-bordered d-flex" id="table4">
                             <thead class="table2">
@@ -552,99 +616,124 @@
 
     <section class="pt-5 footer ">
         <div class="container">
-            <div class="row mt-5 pb-5 border-bottom">
-                <div class=" col-sm-12 col-md col-lg">
-                    <img src="img/logofooter.svg" alt="logoFooter" />
-                </div>
-                <div class=" col-sm-12 col-md col-lg">
-                    <div class="title-footer mb-4">
-                        Services
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="./available-properties.html">
-                                Available Properties
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="./financing.html">
-                                Financing
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./property.html">
-                                Property Management
-                            </a>
-
-                        </li>
-
-                        <li>
-                            <a href="./investment.html">
-                                Investor Resources
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class=" col-sm-12 col-md col-lg">
-                    <div class="title-footer mb-4">
-                        Information
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="./FAQ.html">
-                                FAQs
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://us2.list-manage.com/subscribe?u=7ea4790860f641d20a1c89bc4&id=fe71854d41"
-                                target="_blank">
-                                Newsletter
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./due.html">
-                                Due Diligence
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./reviews.html">
-                                Favorite Reads
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class=" col-sm-12 col-md col-lg">
-                    <div class="title-footer mb-4">
-                        MID SOUTH HOME BUYERS
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="">
-                                46 Flicker Street, Memphis, TN 38104.
-                            </a>
-                        </li>
-                        <li>
-
-                        </li>
-                        <li>
-                            <a href="tel:901 217 4663">
-                                Tel: (901) 217 4663
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </div>
+          <div class="row mt-5 pb-5 border-bottom">
+            <div class=" col-sm-12 col-md col-lg">
+              <img src="img/logofooter.svg" alt="logoFooter" />
             </div>
-            <div class="text-center py-4 rightCopy">
-                ©<span>
-                    Mid South Home Buyers
-                </span> 2023 all rights reserved
+            <div class=" col-sm-12 col-md col-lg">
+              <div class="title-footer mb-4">
+                Services
+              </div>
+              <ul>
+                <li>
+                  <a href="./available-properties.html">
+                    Available Properties
+                  </a>
+    
+                </li>
+                <li>
+                  <a href="./financing.html">
+                    Financing
+                  </a>
+                </li>
+                <li>
+                  <a href="./property.html">
+                    Property Management
+                  </a>
+    
+                </li>
+    
+                <li>
+                  <a href="./investment.html">
+                    Investor Resources
+                  </a>
+                </li>
+              </ul>
             </div>
-    </section>
+            <div class=" col-sm-12 col-md col-lg">
+              <div class="title-footer mb-4">
+                Information
+              </div>
+              <ul>
+                <li>
+                  <a href="./FAQ.html">
+                    FAQs
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="https://us2.list-manage.com/subscribe?u=7ea4790860f641d20a1c89bc4&id=fe71854d41" target="_blank">
+                    Newsletter
+                  </a>
+                </li>
+                <li>
+                  <a href="./due.html">
+                    Due Diligence
+                  </a>
+                </li>
+                <li>
+                  <a href="./reviews.html">
+                    Favorite Reads
+                  </a>
+                </li>
+                <li>
+                  <a href="./read_more/invest-with-your-retirement-funds.html">
+                    Invest with your retirement funds
+                  </a>
+                </li>
+                <li>
+                  <a href="./read_more/our-markets.html">
+                    Our Markets
+                  </a>
+                </li>
+                <li>
+                  <a href="./read_more/our-renovations.html">
+                    Our Renovations
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class=" col-sm-12 col-md col-lg">
+              <div class="title-footer mb-4">
+                Resources
+              </div>
+              <ul>
+                <li>
+                  <a href="#">Come visit us</a>
+                </li>
+                <li>
+                  <a href="#">Resources and Podcasts</a>
+                </li>
+              </ul>
+            </div>
+    
+            <div class=" col-sm-12 col-md col-lg">
+              <div class="title-footer mb-4">
+                MID SOUTH HOME BUYERS
+              </div>
+              <ul>
+                <li>
+                  <a href="">
+                    46 Flicker Street, Memphis, TN 38104.
+                  </a>
+                </li>
+                <li>
+    
+                </li>
+                <li>
+                  <a href="tel:901 217 4663">
+                    Tel: (901) 217 4663
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-center py-4 rightCopy">
+            ©<span>
+              Mid South Home Buyers
+            </span> 2023 all rights reserved
+          </div>
+      </section>
 
     <!-- Include Bootstrap JS (optional) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -677,6 +766,18 @@
                 XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
                 XLSX.writeFile(wb, fn || ('MySheetName.' + (type || 'xlsx')));
         }
+    </script>
+    <!-- JavaScript to update the modal images -->
+    <script>
+        var modalImages = [document.getElementById('modalImage1'), document.getElementById('modalImage2'), document.getElementById('modalImage3')];
+        var images = document.querySelectorAll('#carouselExampleControls img');
+        images.forEach(function(image, index) {
+            image.addEventListener('click', function() {
+                modalImages.forEach(function(modalImage, modalIndex) {
+                    modalImage.src = images[modalIndex].src;
+                });
+            });
+        });
     </script>
 </body>
 

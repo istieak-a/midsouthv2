@@ -126,22 +126,7 @@ var table = document.getElementById("investmentTable");
 var table2 = document.getElementById("investmentTableexpenss");
 var table3 = document.getElementById("investmentTable3");
 var table4 = document.getElementById("table4");
-if (document.getElementById("toggleTable")){
-document.getElementById("toggleTable").addEventListener("click", function () {
-   
-    if (table.style.display === "none") {
-        table.style.display = "table";
-        table2.style.display = "table";
-        table3.style.display = "table";
-        table4.style.display = "table";
-    } else {
-        table.style.display = "none";
-        table2.style.display = "none";
-        table3.style.display = "none";
-        table4.style.display = "none";
-    }
-});
-}
+
 
 function formatMoneyWithSeparator(amount) {
     // Ensure the input is a number
@@ -243,126 +228,50 @@ function populateTable4() {
     }
 }
 
+
+
+
 // Call the function to populate the table
 
-populateTable1();
-populateTable2();
-populateTable3()
-populateTable4()
 
+// Get the modal
+var modal = document.getElementById("myModal");
 
-var years = Array.from({ length: anual_rental_cashflow_after_expenses.length }, (_, i) => (1 + i).toString());
+// Get the button that opens the modal
+var btns = Array.from(document.getElementsByClassName("irr_toggleTable"))
+console.log(btns)
+// When the user clicks the button, open the modal
+function openModal() {
+    console.log("button clicked irrr");
+    // // Run the functions to populate the tables
+    populateTable1();
+    populateTable2();
+    populateTable3();
+    populateTable4();
+    // document.getElementById("table3body").innerHTML = `hiii`
+    // console.log(document.getElementById("table3body").innerHTML );
+    modal.style.display = "block";
+}
+btns.forEach((btn)=>{
+    btn.addEventListener("click",openModal)
+})
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
-var ctx = document.getElementById("myChart");
+// Get the close button inside the modal
+var closeButton = document.querySelector(".close");
 
-// Create the chart
-var myChart = new Chart(ctx, {
-    type: "bar", // Bar chart type
-    data: {
-        labels: years, // Years as labels
-        datasets: [{
-            label: "Money",
-            data: anual_rental_cashflow_after_expenses, // Money values
-            backgroundColor: "rgba(255, 165, 0, 0.7)", // Orange fill color
-            borderWidth: 1, // Border width
-        }],
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: "Annual Cashflow After Expenses",
-                },
-            },
-            x: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: "Years",
-                },
-            },
-        },
-        responsive: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            datalabels: {
-                display: true, // Display data labels by default
-                anchor: 'end',
-                align: 'end',
-                color: 'black', // Black label color
-                font: {
-                    weight: 'bold',
-                },
-                formatter: function (value) {
-                    return "$" + value.toFixed(2); // Display value with 2 decimal places and a dollar sign
-                },
-            },
-        },
-    },
-});
+// Function to handle closing the modal
+function closeModal() {
+  modal.style.display = "none";
+}
 
-// Data where each index represents a year and the value represents the money
-
-// Generate an array of years starting from 2020
-var years = Array.from({ length: Total_Return_on_Investment.length }, (_, i) => (1 + i).toString());
-
-// Get the canvas element after it's fully loaded
-var ctx = document.getElementById("myChart2");
-
-// Create the chart
-var myChart = new Chart(ctx, {
-    type: "bar", // Bar chart type
-    data: {
-        labels: years, // Years as labels
-        datasets: [{
-            label: "Money",
-            data: Total_Return_on_Investment, // Money values
-            backgroundColor: " rgb(0, 255, 0)", // Orange fill color
-            borderWidth: 1, // Border width
-        }],
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: "Total Return on Investment",
-                },
-            },
-            x: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: "Years",
-                },
-            },
-        },
-        responsive: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            datalabels: {
-                display: true, // Display data labels by default
-                anchor: 'end',
-                align: 'end',
-                color: 'black', // Black label color
-                font: {
-                    weight: 'bold',
-                },
-                formatter: function (value) {
-                    return "$" + value.toFixed(2); // Display value with 2 decimal places and a dollar sign
-                },
-            },
-        },
-    },
-});
-
+// Attach click event listener to the close button
+closeButton.addEventListener("click", closeModal);
 
 
 

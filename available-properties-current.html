@@ -12,7 +12,6 @@
     <!-- icon -->
     <link rel="icon" href="./img/logoIcon.svg" />
     <!-- style -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/bootsrap/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="css/bootsrap/bootstrap.min.css" />
@@ -64,39 +63,6 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* .owl-carousel .owl-nav {
-    font-size: 54px; 
-    border: 1px solid red;
-    padding: 0 !important;
-    margin: 0 !important;
-} */
-.owl-carousel .owl-nav button{
-    background-color: #f9bd3a;
-}
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
-    background-color: #f9bd3a;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    position: relative;
-    
-    
-}
-.owl-carousel .owl-nav span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    padding-bottom: 10px;
-}
-
-.item{
-    height: 100%;
-    width: 100%;
-
-}
-
 
 </style>
 
@@ -354,6 +320,7 @@
 
     </section>
     <section>
+
         <div class="container">
             <div class="row text-end mb-2 mt-4">
                 <div class="dropdown">
@@ -362,157 +329,230 @@
                     </button>
                     <ul class="dropdown-menu m-0 p-0" id="filters">
                         <li class="p-0 m-0"> <button class="button is-checked" data-filter="*">SHOW ALL</button></li>
-                        <li class="p-0 m-0"><button class="button" data-filter=".state">STATE</button></li>
-                        <li class="p-0 m-0"><button class="button" data-filter=".cashflow">CASHFLOW</button></li>
-                        <li class="p-0 m-0"><button class="button" data-filter=".irr">IRR</button></li>
-                        <li class="p-0 m-0"><button class="button" data-filter=".price">PRICE</button></li>
-                        <li class="p-0 m-0"><button class="button" data-filter=".bed">BED</button></li>
-                        <li class="p-0 m-0"><button class="button" data-filter=".bath">BATH</button></li>
+                        <li class="p-0 m-0"><button class="button" data-filter=".CONTRACT">STATE</button></li>
+                        <li class="p-0 m-0"><button class="button" data-filter=".CONTRACT">CASHFLOW</button></li>
+                        <li class="p-0 m-0"><button class="button" data-filter=".CONTRACT">IRR</button></li>
+
+                        <li class="p-0 m-0"><button class="button" data-filter=".CONTRACT">PRICE</button></li>
+                        <li class="p-0 m-0"><button class="button" data-filter=".CONTRACT">BED</button></li>
+                        <li class="p-0 m-0"><button class="button" data-filter=".CONTRACT">BATH</button></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+
+
     </section>
 
-    <section class="grid">
+    <section class="">
         <div class="container">
             <div class="row">
                 <!-- property start -->
-                <div class="myDiv element-item"> 
-                    <div class="row py-5">
-                        <div class="col-md-5 col-lg-4 d-flex flex-column"> 
+                <div class="col-sm-12 col-md-5 col-lg-5 myDiv element-item ">
+                    <div class=" py-5">
+                        <div class="col-sm-12 col-md-5 col-lg-5 d-flex flex-column">
                             <div class="selected-image">
                                 <button class="under">UNDER CONTRACT</button>
-                                <img src="img/availble/85snglcd.png" alt="Image1" class="img-fluid"> 
+                                <img src="img/availble/85snglcd.png" alt="Image1" height="500px">
                                 <div class="compare">
                                     <input type="checkbox" class="myCheckbox mx-2" name="option1" value="Option 1">
                                     compare
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-lg-4 mt-5 mt-md-0 d-flex flex-column"> 
+                        <div style="margin-left: -40px;margin-right: 40px;" class="col-sm-12 col-md-4 col-lg-4 mt-5 mt-md-2 d-flex flex-column ">
                             <div class="titleSort">
                                 413 Sparrow Rd Little Rock AR, 72076
                             </div>
                             <div class="infoSort">
-                                Investor Price: $175,500 <br>
-                                Bed/Bath: 4/1.5 <br>
-                                Rent: $1450 <br>
-                                Total Monthly Payment: $157 <br>
-                                Cash Flow: $1293<br>
+                                Investor Price: $175,500
+                                <br>
+                                Bed/Bath: 4/1.5
+                                <br>
+                                Rent: $1450
+                                <br>
+                                Total Monthly Payment: $157
+                                <br>
+                                Cash Flow: $1293
+                                <br>
+                                
+                            </div>
+        
+
+                            <div id="irr_div" class="mt-3 d-flex ">
+                                <h1 class="m mx-2">IRR: 5% </h1>
+                                <button class="irr_toggleTable p-2 " style="background-color: #447eb2; color: #ffffff;font-family: Montserrat;
+                                font-size: 19px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;text-transform: uppercase;" class="btn px-3 mx-1">View irr</button>
+                            </div>
+                            <div class="mt-3">
+                                <a href="property-details.html">
+                                    <button class="PropertyS py-2 px-3">Property Details</button>
+                                </a>
+                                <a href="https://us2.list-manage.com/subscribe?u=7ea4790860f641d20a1c89bc4&id=fe71854d41">
+                                    <button class="moreS mx-2 py-2 px-3">More Info</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12  col-md-3 col-lg-3 d-flex flex-column align-items-center">
+                            <div class="d-flex mt-3">
+                                <img style="height: 190px; width: 180px;" src="img/availble/t6wr2l37.png" alt="Image 3">
+                                <img style="height: 190px; width: 180px; padding-left: 15px;" src="img/availble/osaf33j3.png" alt="Image 2">
+                            </div>
+                            <div class="d-flex mt-3 ">
+                                <img style="height: 190px; width: 180px;" src="img/availble/t6wr2l37.png" alt="Image 3">
+                                <img style="height: 190px; width: 180px; padding-left: 15px;" src="img/availble/t6wr2l37.png" alt="Image 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                 <!-- property end -->
+                <!-- property start -->
+                <div class="row">
+
+                
+                <div class="col-sm-12 col-md-4 col-lg-4 myDiv element-item ">
+                    <div class=" py-5">
+                        <div class="col-sm-12 col-md-5 col-lg-5 d-flex flex-column">
+                            <div class="selected-image">
+                                <button class="under">UNDER CONTRACT</button>
+                                <img src="img/availble/bloculfp.png" alt="Image 1" height="500px">                                <div class="compare">
+                                    <input type="checkbox" class="myCheckbox mx-2" name="option1" value="Option 1">
+                                    compare
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-left: -40px;margin-right: 40px;" class="col-sm-12 col-md-4 col-lg-4 mt-5 mt-md-2 d-flex flex-column">
+                            <div class="titleSort">
+                                4314 N. Proctor Dr Memphis TN,
+                                38118
+                            </div>
+                            <div class="infoSort">
+                                Investor Price: $135,000
+                                <br />
+
+                                Bed/Bath: 3/1
+                                <br />
+                                Rent: $1095
+                                <br />
+                                Total Monthly Payment: $121
+                                <br />
+                                Cash Flow: $974
+                                <br>
+                                Internal
+                                Rate of Return: 5%
+
                             </div>
                             <div id="irr_div" class="mt-3 d-flex ">
                                 <h1 class="m mx-2">IRR: 5% </h1>
-                                <button class="irr_toggleTable p-2 btn btn-primary" style="font-family: Montserrat; font-size: 19px; font-style: normal; font-weight: 700; line-height: normal; text-transform: uppercase;">View IRR</button>
+                                <button class="irr_toggleTable p-2 " style="background-color: #447eb2; color: #ffffff;font-family: Montserrat;
+                                font-size: 19px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;text-transform: uppercase;" class="btn px-3 mx-1">View irr</button>
                             </div>
                             <div class="mt-3">
-                                <a href="property-details.html" class="btn btn-primary py-2 px-3">Property Details</a>
-                                <a href="mailto:liz@midsouthhomebuyers.com?subject=3162 Clarendon Rd&body=I would like information about 3162 Clarendon Rd." class="btn btn-secondary mx-2 py-2 px-3">More Info</a>
+                                <a href="property-details.html">
+                                    <button class="PropertyS py-2 px-3">Property Details</button>
+                                </a>
+                                <a
+                                    href="https://us2.list-manage.com/subscribe?u=7ea4790860f641d20a1c89bc4&id=fe71854d41">
+                                    <button class="moreS mx-0 mx-md-2 mx-lg-2 py-2   px-3">
+                                        More Info
+                                    </button>
+                                </a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-lg-4 d-flex flex-column align-items-center mt-5 mt-md-0 ">
-                            <div class="owl-carousel owl-theme">
-                                <div class="item"><img src="img/413 Sparrow Rd_2.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded "></div>
-                                <div class="item"><img src="/img/413 Sparrow Rd_3.jpeg" alt="Image 2" class="img-fluid h-100 w-100 rounded"></div>
-                                <div class="item"><img src="/img/413 Sparrow Rd_4.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded"></div>
-                                <div class="item"><img src="/img/413 Sparrow Rd_5.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded"></div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 d-flex flex-column align-items-center">
+                            <div class="d-flex mt-3">
+                                <img style="height: 190px; width: 180px;" src="img/availble/8dnmzhun.png" alt="Image 3">
+                                <img style="height: 190px; width: 180px; padding-left: 15px; " src="img/availble/pffsecjw.png" alt="Image 2">
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img style="height: 190px; width: 180px;" src="img/availble/qp7p1iik.png" alt="Image 3">
+                                <img style="height: 190px; width: 180px; padding-left: 15px; " src="img/availble/qp7p1iik.png" alt="Image 3">
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                 <!-- property end -->
-                <!-- property start -->
-
-                <div class="myDiv element-item container">
-                    <div class="row py-5">
-                        <div class="col-md-5 col-lg-4 d-flex flex-column">
-                            <div class="selected-image">
-                                <button class="under">UNDER CONTRACT</button>
-                                <img src="img/availble/bloculfp.png" alt="Image 1" class="img-fluid">
-                                <div class="compare">
-                                    <input type="checkbox" class="myCheckbox mx-2" name="option1" value="Option 1">
-                                    compare
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 mt-5 mt-md-0 d-flex flex-column">
-                            <div class="titleSort">
-                                4314 N. Proctor Dr Memphis TN, 38118
-                            </div>
-                            <div class="infoSort">
-                                Investor Price: $135,000 <br>
-                                Bed/Bath: 3/1 <br>
-                                Rent: $1095 <br>
-                                Total Monthly Payment: $121 <br>
-                                Cash Flow: $974 <br>
-                            </div>
-                            <div id="irr_div" class="mt-3 d-flex">
-                                <h1 class="m mx-2">IRR: 5%</h1>
-                                <button class="irr_toggleTable p-2 btn btn-primary" style="font-family: Montserrat; font-size: 19px; font-style: normal; font-weight: 700; line-height: normal; text-transform: uppercase;">View IRR</button>
-                            </div>
-                            <div class="mt-3">
-                                <a href="property-details.html" class="btn btn-primary py-2 px-3">Property Details</a>
-                                <a href="mailto:liz@midsouthhomebuyers.com?subject=3162 Clarendon Rd&body=I would like information about 3162 Clarendon Rd." class="btn btn-secondary mx-2 py-2 px-3">More Info</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-lg-4 d-flex flex-column align-items-center mt-5 mt-md-0">
-                            <div class="owl-carousel owl-theme">
-                                <div class="item"><img src="/img/4314 N. Proctor Dr_2.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded "></div>
-                                <div class="item"><img src="/img/4314 N. Proctor Dr_3.jpeg" alt="Image 2" class="img-fluid h-100 w-100 rounded "></div>
-                                <div class="item"><img src="/img/4314 N. Proctor Dr_4.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded "></div>
-                                <div class="item"><img src="/img/4314 N. Proctor Dr_5.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded "></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+            </div>
                 <!-- property end -->
                 <!-- property start -->
-
-                <div class="myDiv element-item container mb-5 ">
-                    <div class="row py-5">
-                        <div class="col-md-5 col-lg-4 d-flex flex-column">
+            <div class="row">           
+                <div class="col-sm-12 col-md-3 col-lg-3 myDiv element-item">
+                    <div class=" py-5">
+                        <div class="col-sm-12 col-md-5 col-lg-5 d-flex flex-column">
                             <div class="selected-image">
                                 <button class="under">UNDER CONTRACT</button>
-                                <img src="img/availble/iv4oxtjp.png" alt="Image 1" class="img-fluid">
-                                <div class="compare">
+                                <img src="img/availble/iv4oxtjp.png" alt="Image 1" height="500px">                                <div class="compare">
                                     <input type="checkbox" class="myCheckbox mx-2" name="option1" value="Option 1">
                                     compare
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-lg-4 mt-5 mt-md-0 d-flex flex-column">
+                        <div style="margin-left: -40px;margin-right: 40px;" class="col-sm-12 col-md-4 col-lg-4 mt-5 mt-md-2 d-flex flex-column">
+
+
                             <div class="titleSort">
-                                9102 Tanya Dr Little Rock AR, 72204
+                                9102 Tanya Dr Little Rock AR,
+                                72204
                             </div>
                             <div class="infoSort">
-                                Investor Price: $216,900 <br>
-                                Bed/Bath: 4/2 <br>
-                                Rent: $1810 <br>
-                                Total Monthly Payment: $203 <br>
-                                Cash Flow: $1607 <br>
+                                Investor Price: $216,900
+                                <br />
+
+                                Bed/Bath: 4/2
+                                <br />
+                                Rent: $1810
+                                <br />
+                                Total Monthly Payment: $203
+                                <br />
+                                Cash Flow: $1607
+                                <br>
+                                Internal
+                                Rate of Return: 5%
                             </div>
-                            <div id="irr_div" class="mt-3 d-flex">
-                                <h1 class="m mx-2">IRR: 5%</h1>
-                                <button class="irr_toggleTable p-2 btn btn-primary" style="font-family: Montserrat; font-size: 19px; font-style: normal; font-weight: 700; line-height: normal; text-transform: uppercase;">View irr</button>
+
+
+                            <div id="irr_div" class="mt-3 d-flex ">
+                                <h1 class="m mx-2">IRR: 5% </h1>
+                                <button class="irr_toggleTable p-2 " style="background-color: #447eb2; color: #ffffff;font-family: Montserrat;
+                                font-size: 19px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;text-transform: uppercase;" class="btn px-3 mx-1">View irr</button>
                             </div>
                             <div class="mt-3">
-                                <a href="property-details.html" class="btn btn-primary py-2 px-3">Property Details</a>
-                                <a href="mailto:liz@midsouthhomebuyers.com?subject=3162 Clarendon Rd&body=I would like information about 3162 Clarendon Rd." class="btn btn-secondary mx-2 py-2 px-3">More Info</a>
+                                <a href="property-details.html">
+                                    <button class="PropertyS py-2 px-3">Property Details</button>
+                                </a>
+                                <a
+                                    href="https://us2.list-manage.com/subscribe?u=7ea4790860f641d20a1c89bc4&id=fe71854d41">
+                                    <button class="moreS mx-0 mx-md-2 mx-lg-2 py-2   px-3">
+                                        More Info
+                                    </button>
+                                </a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-lg-4 d-flex flex-column align-items-center mt-5 mt-md-0">
-                            <div class="owl-carousel owl-theme">
-                                <div class="item"><img src="/img/9102 Tanya Dr A_2.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded "></div>
-                                <div class="item"><img src="/img/9102 Tanya Dr A_3.jpeg" alt="Image 2" class="img-fluid h-100 w-100 rounded "></div>
-                                <div class="item"><img src="/img/9102 Tanya Dr A_4.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded "></div>
-                                <div class="item"><img src="/img/9102 Tanya Dr A_5.jpeg" alt="Image 3" class="img-fluid h-100 w-100 rounded "></div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 d-flex flex-column align-items-center">
+                            <div class="d-flex mt-3">
+                                <img style="height: 190px; width: 180px;" src="img/availble/qvr9xz3g.png" alt="Image 3">
+                                <img style="height: 190px; width: 180px; padding-left: 15px; " src="img/availble/nx77khgl.png" alt="Image 2">
+                              
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img style="height: 190px; width: 180px;" src="img/availble/lb7ss8n2.png" alt="Image 3">
+                                <img style="height: 190px; width: 180px; padding-left: 15px; " src="img/availble/lb7ss8n2.png" alt="Image 3">
                             </div>
                         </div>
                     </div>
                 </div>
-                
+            </div>
                 <!-- property end -->
 
             </div>
@@ -533,7 +573,7 @@
 
 <div id="myModal" class="modal">
     <div class="modal-content">
-        <span class="close text-danger" style="text-align: right; display: block;">&times;</span>
+        <span class="close text-danger">&times;</span>
 <div id="x">
     <div class="container">
         
@@ -833,7 +873,7 @@
     <script src="./js/main.js"></script>
 
     <!-- bootstrap js -->
-    <script src="./js/bootstrap/bootstrap.min.js"></script>
+    <script src="./js/bootsrtap/bootstrap.min.js"></script>
     <!-- owl js -->
     <script src="./js/owl/owl.carousel.min.js"></script>
     <script type="text/javascript">
@@ -940,28 +980,6 @@
         //   });
         // }
 
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                loop:true,
-                margin:10,
-                nav:true,
-                items:1, // Display only one item at a time
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:1
-                    },
-                    1000:{
-                        items:1
-                    }
-                }
-            });
-        });
     </script>
 </body>
 
